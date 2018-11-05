@@ -44,8 +44,7 @@ bot.on('message', msg => {
                     "Nom du Serveur: " + Server.Name + " \n",
                     "Combien de Grade: " + e.Server.RoleCount + " \n",
                     "AFK: " + Server.AFKTimeout + " seconds \n",
-                    "Nombre de Salon: " + Server.ChannelCount + " \n",
-                    "Il y à " + msg.guild.memberCount + " Membres ```");
+                    "Nombre de Salon: " + Server.ChannelCount + " \n",);
     } else
 });
     
