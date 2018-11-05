@@ -24,7 +24,6 @@ bot.on('message', function (message){
     }
 });
 
-
 bot.on('message', msg => {
     if (msg.content === "bonjour"){
         msg.reply("Heureux de te revoir parmis nous.")
@@ -49,5 +48,6 @@ bot.on('message', msg => {
         .setColor("0x0000FF")
     message.channel.sendEmbed(embed)
     }
-    
+});
+
 bot.login(token); //a garder en version heroku
