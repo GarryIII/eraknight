@@ -38,14 +38,24 @@ bot.on('message', msg => {
         msg.channel.send("En cours.... de développement")
         console.log("Une personne a demandé pour aller sur ton site.")
     }
-    if (command === "info") {
-          message.channel.send("```Admin: " + Server.Owner + " \n",
-                    "IP du Seveur " + "ErakKnight v2 Soon...");
-                    "Nom du Serveur: " + Server.Name + " \n",
-                    "Combien de Grade: " + e.Server.RoleCount + " \n",
-                    "AFK: " + Server.AFKTimeout + " seconds \n",
-                    "Nombre de Salon: " + Server.ChannelCount + " \n",);
-    } else
+     if (commandKey == "info") {
+        var embed = new Discord.RichEmbed();
+        embed.addField("EraKnight", `${message.guild.name}`, true)
+           .addField("Serveur ID", `${message.guild.id}`, true)
+          .setColor(randomcolor())
+          .setFooter(' ', ' ')
+          if (message.guild.iconURL) embed.setThumbnail(`${message.guild.iconURL}`);
+          if (message.author.avatarURL) embed.setURL(`${message.author.avatarURL}`);
+      embed.setTimestamp()
+          .addField('Admin du Discord', `${message.guild.owner.user.username}`, true)
+          .addField('Crée le', `${moment(message.guild.createdAt).format('MM.DD.YY')}`, true)
+          .addField('Roles', `${message.guild.roles.filter(r => r.name).size}`, true)
+          .addField('Verification Level', `${message.guild.verificationLevel}`, true)
+          .addField('Region', `${message.guild.region}`, true)
+      message.channel.sendEmbed(
+          embed, {
+              disableEveryone: true
+    }
 });
     
 bot.login(token); //a garder en version heroku
