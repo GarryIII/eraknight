@@ -52,7 +52,8 @@ module.exports.run = async (bot, message, args) => {
     }
 
     module.exports.help = {
-      name:"serverinfo"
+      name:"Information du Discord"
     }
+});
     
 bot.login(token); //a garder en version heroku
