@@ -54,6 +54,5 @@ module.exports.run = async (bot, message, args) => {
     module.exports.help = {
       name:"serverinfo"
     }
-});
     
 bot.login(token); //a garder en version heroku
