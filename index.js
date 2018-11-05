@@ -36,7 +36,7 @@ bot.on('message', msg => {
             msg.reply('EraKnight V2 Soon.....')
     }
     if (msg.content === "site"){
-        msg.channel.send("En cours....")
+        msg.channel.send("En cours.... de développement")
         console.log("Une personne a demandé pour aller sur ton site.")
     }
 });
