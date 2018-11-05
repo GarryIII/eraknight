@@ -32,7 +32,7 @@ bot.on('message', msg => {
     if (msg.content.match(/salut/i)) {
             msg.reply('Je suis d\'accord avec toi.')
     }
-    if (msg.content == "IP"){
+    if (msg.content == "ip"){
             msg.reply('EraKnight V2 Soon.....')
     }
     if (msg.content === prefix + "site"){
