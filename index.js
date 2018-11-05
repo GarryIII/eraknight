@@ -42,7 +42,6 @@ bot.on('message', msg => {
         var info_embed = new Discord.RichEmbed()
         .setColor("#40A497")
         .setTitle("Information du Discord!")
-        .addField(" :robot: EraKnight :", `${client.user.tag}`, true)
         .addField("Déscriminateur du bot :hash:", `#${client.user.descriminator}`)
         .addField("ID :id: ", `${client.user.id}`)
         .addField("Nombre de membres", msg.guild.members.size)
