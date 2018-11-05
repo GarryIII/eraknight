@@ -39,7 +39,6 @@ bot.on('message', msg => {
         msg.channel.send("En cours....")
         console.log("Une personne a demandé pour aller sur ton site.")
     }
-
 });
 
 bot.login(token); //a garder en version heroku
