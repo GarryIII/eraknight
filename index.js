@@ -2,6 +2,7 @@ const Discord = require('discord.js');
 const bot = new Discord.Client();
 const token = process.env.token // a garder en version heroku
 const prefix = ("?");
+var prefix = ("/");
 
 bot.on('ready', function () {
     console.log("Je suis prêt à être utilisé.")
@@ -38,7 +39,7 @@ bot.on('message', msg => {
         msg.channel.send("En cours.... de développement")
         console.log("Une personne a demandé pour aller sur ton site.")
     }
-    if(message.content === "info") {
+    if(message.content === prefix + "info") {
        var embed = new Discord.RichEmbed()
        .setDescription("Information du Discord")
        .addField("EraKnight", message.guild.name)
