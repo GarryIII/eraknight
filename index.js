@@ -44,13 +44,10 @@ bot.on('message', msg => {
         let serverembed = new Discord.RichEmbed()
         .setDescription("Serveur Information")
         .setColor("#15f153")
-        .setThumbnail(sicon)
         .addField("EraKnight", message.guild.name)
         .addField("Crée le", message.guild.createdAt)
         .addField("Rejoin le", message.member.joinedAt)
         .addField("Totale de Membre", message.guild.memberCount);
-
-        return message.channel.send(serverembed);
    }
 });
     
