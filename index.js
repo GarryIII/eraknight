@@ -47,6 +47,32 @@ bot.on('message', msg => {
        .setColor("0x0000FF")
     msg.channel.sendEmbed(embed)
     }
+    module.exports.run = async (bot, message, args) => {
+        let rUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
+        if(!rUser) return message.channel.send("Couldn't find user.");
+        let rreason = args.join(" ").slice(22);
+
+        let reportEmbed = new Discord.RichEmbed()
+        .setDescription("Reports")
+        .setColor("#15f153")
+        .addField("Joueur Signaler", `${rUser} with ID: ${rUser.id}`)
+        .addField("Signaler par", `${message.author} with ID: ${message.author.id}`)
+        .addField("Salon", message.channel)
+        .addField("Heure", message.createdAt)
+        .addField("Raison", rreason);
+
+        let reportschannel = message.guild.channels.find(`name`, "reports");
+        if(!reportschannel) return message.channel.send("Couldn't find reports channel.");
+
+
+        message.delete().catch(O_o=>{});
+        reportschannel.send(reportEmbed);
+
+    }
+ 
+    module.exports.help = {
+        name: "report"
+    }
 });
 
 bot.login(token); //a garder en version heroku
