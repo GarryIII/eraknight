@@ -38,15 +38,15 @@ bot.on('message', msg => {
         msg.channel.send("En cours.... de développement")
         console.log("Une personne a demandé pour aller sur ton site.")
     }
-    if(message.content === prefix + "info") {
+    if(msg.content === "info") {
        var embed = new Discord.RichEmbed()
        .setDescription("Information du Discord")
-       .addField("EraKnight", message.guild.name)
-       .addField("Crée le", message.guild.createAt)
-       .addField("Tu as rejoin le", message.member.joinedAt)
-       .addField("Utilisateurs sur le discord", message.guild.memberCount)
+       .addField("EraKnight", msg.guild.name)
+       .addField("Crée le", msg.guild.createAt)
+       .addField("Tu as rejoin le", msg.member.joinedAt)
+       .addField("Utilisateurs sur le discord", msg.guild.memberCount)
        .setColor("0x0000FF")
-    message.channel.sendEmbed(embed)
+    msg.channel.sendEmbed(embed)
     }
 });
 
