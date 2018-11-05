@@ -49,6 +49,6 @@ bot.on('message', msg => {
         .setColor("0x0000FF")
     message.channel.sendEmbed(embed)
     
-}}});
+}}})
 
 bot.login(token); //a garder en version heroku
