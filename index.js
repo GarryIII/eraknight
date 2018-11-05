@@ -43,7 +43,6 @@ bot.on('message', msg => {
        .setDescription("Information du Discord")
        .addField("Nom du Discord", msg.guild.name)
        .addField("IP du serveur", "EraKnight Soon....")
-       .addField("Tu as rejoin le", msg.member.joined)
        .addField("Utilisateurs sur le discord", msg.guild.memberCount)
        .setColor("0x0000FF")
     msg.channel.sendEmbed(embed)
