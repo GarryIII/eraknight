@@ -40,7 +40,6 @@ bot.on('message', msg => {
     }
     if(msg.content === "info"){
          
-        let sicon = message.guild.iconURL;
         let serverembed = new Discord.RichEmbed()
         .setDescription("Serveur Information")
         .setColor("#15f153")
