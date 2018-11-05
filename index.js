@@ -35,7 +35,7 @@ bot.on('message', msg => {
     if (msg.content == "ip"){
             msg.reply('EraKnight V2 Soon.....')
     }
-    if (msg.content === prefix + "site"){
+    if (msg.content === "site"){
         msg.channel.send("En cours....")
         console.log("Une personne a demandé pour aller sur ton site.")
     }
