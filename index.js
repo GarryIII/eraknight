@@ -39,6 +39,10 @@ bot.on('message', msg => {
         msg.channel.send("En cours....")
         console.log("Une personne a demandé pour aller sur ton site.")
     }
+client.on('message', msg => {
+    if (msg.content === 'ping') {
+        msg.reply('Pong!');
+    }
 
 });
 
