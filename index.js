@@ -41,8 +41,7 @@ bot.on('message', msg => {
     if(msg.content === "info") {
        var embed = new Discord.RichEmbed()
        .setDescription("Information du Discord")
-       .addField("EraKnight", msg.guild.name)
-       .addField("Crée le", msg.guild.createAt)
+       .addField("Nom du Discord", msg.guild.name)
        .addField("Tu as rejoin le", msg.member.joinedAt)
        .addField("Utilisateurs sur le discord", msg.guild.memberCount)
        .setColor("0x0000FF")
