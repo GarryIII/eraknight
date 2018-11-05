@@ -39,7 +39,7 @@ bot.on('message', msg => {
         msg.channel.send("En cours.... de développement")
         console.log("Une personne a demandé pour aller sur ton site.")
     }
-    if(cmd === `${prefix}info`){
+    if(msg.content === `${prefix}info`){
          
         let sicon = message.guild.iconURL;
         let serverembed = new Discord.RichEmbed()
