@@ -39,8 +39,8 @@ bot.on('message', msg => {
         msg.channel.send("En cours.... de développement")
         console.log("Une personne a demandé pour aller sur ton site.")
     }
-    if (message.content === "info")
-        var embed = new Discord.RichEmbed
+    if (message.content === "info") {
+        var embed = new Discord.RichEmbed()
         .setDescription("Information du Discord")
         .addField("EraKnight", message.guild.name)
         .addField("Crée le", message.guild.createAt)
