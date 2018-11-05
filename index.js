@@ -45,7 +45,7 @@ bot.on('message', msg => {
         .addField("Nombre de membres", msg.guild.members.size)
         .addField("Nombre de Salons", msg.guild.channels.size)
         .setFooter("Info - EraKnight")
-        msg.channels.sendMessage(info_embed)
+        msg.channels.send(info_embed)
         console.log("Un utilisateur à éffectué la commande d'information!")
     }
 });
