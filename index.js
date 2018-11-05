@@ -60,6 +60,4 @@ bot.on('message', msg => {
   );
 } else
     
-});
-    
 bot.login(token); //a garder en version heroku
