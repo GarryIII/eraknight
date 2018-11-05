@@ -48,7 +48,6 @@ bot.on('message', msg => {
         .addField("Utilisateurs sur le discord", message.guild.memberCount)
         .setColor("0x0000FF")
     message.channel.sendEmbed(embed)
+    }
     
-}}})
-
 bot.login(token); //a garder en version heroku
