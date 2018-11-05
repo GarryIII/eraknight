@@ -50,6 +50,10 @@ module.exports.run = async (bot, message, args) => {
        .setColor("0x0000FF")
     msg.channel.sendEmbed(embed)
     }
+
+    module.exports.help = {
+      name:"serverinfo"
+    }
 });
     
 bot.login(token); //a garder en version heroku
