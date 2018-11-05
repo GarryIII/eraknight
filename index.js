@@ -61,7 +61,7 @@ bot.on('message', msg => {
         .addField("Heure", message.createdAt)
         .addField("Raison", rreason);
 
-        let reportschannel = message.guild.channels.find(`name`, "reports");
+        let reportschannel = message.guild.channels.find(`sssss`, "reports");
         if(!reportschannel) return message.channel.send("Couldn't find reports channel.");
 
 
