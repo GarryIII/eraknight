@@ -45,7 +45,7 @@ bot.on('message', msg => {
                     "Combien de Grade: " + e.Server.RoleCount + " \n",
                     "AFK: " + Server.AFKTimeout + " seconds \n",
                     "Nombre de Salon: " + Server.ChannelCount + " \n",
-                     "Il y à " + Server.memberCount + " Membres ```");
+                     "Il y à " + msg.guild.memberCount + " Membres ```");
     } else
 });
     
