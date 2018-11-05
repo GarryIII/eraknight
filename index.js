@@ -51,5 +51,5 @@ module.exports.run = async (bot, message, args) => {
     msg.channel.sendEmbed(embed)
     }
 });
-
+    
 bot.login(token); //a garder en version heroku
