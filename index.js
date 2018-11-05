@@ -41,6 +41,7 @@ bot.on('message', msg => {
     if(msg.content === "info") {
        var embed = new Discord.RichEmbed()
        .setDescription("Information du Discord")
+       .setThumbnail(sicon)
        .addField("Nom du Discord", msg.guild.name)
        .addField("IP du serveur", "EraKnight Soon....")
        .addField("Utilisateurs sur le discord", msg.guild.memberCount)
