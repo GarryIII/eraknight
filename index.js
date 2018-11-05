@@ -1,4 +1,5 @@
 const Discord = require('discord.js');
+const botconfig = require("./botconfig.json");
 const bot = new Discord.Client();
 const token = process.env.token // a garder en version heroku
 const prefix = ("?");
@@ -38,11 +39,11 @@ bot.on('message', msg => {
         msg.channel.send("En cours.... de développement")
         console.log("Une personne a demandé pour aller sur ton site.")
     }
-     if(cmd === `${prefix}serverinfo`){
+    if(cmd === `${prefix}info`){
          
         let sicon = message.guild.iconURL;
         let serverembed = new Discord.RichEmbed()
-        .setDescription("Server Information")
+        .setDescription("Serveur Information")
         .setColor("#15f153")
         .setThumbnail(sicon)
         .addField("EraKnight", message.guild.name)
