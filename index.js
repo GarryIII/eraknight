@@ -38,16 +38,15 @@ bot.on('message', msg => {
         msg.channel.send("En cours.... de développement")
         console.log("Une personne a demandé pour aller sur ton site.")
     }
-    if(msg.content === "info"){
-         
-        let serverembed = new Discord.RichEmbed()
-        .setDescription("Serveur Information")
-        .setColor("#15f153")
-        .addField("EraKnight", message.guild.name)
-        .addField("Crée le", message.guild.createdAt)
-        .addField("Rejoin le", message.member.joinedAt)
-        .addField("Totale de Membre", message.guild.memberCount);
-   }
+    if (msg.content === "info"){
+        var embed = new Discord.RichEmbed()
+        .setDescription("Information du Discord")
+        .addField("Nom du Discord", msg.guild.name)
+        .addField("IP du serveur", "EraKnight Soon....")
+        .addField("Utilisateurs sur le discord", msg.guild.memberCount)
+        .setColor("0x0000FF")
+      msg.channel.sendEmbed(embed)
+    }
 });
     
 bot.login(token); //a garder en version heroku
