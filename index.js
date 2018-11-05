@@ -55,6 +55,5 @@ bot.on('message', msg => {
     msg.channel.sendEmbed(
         embed, {
            disableEveryone: true
- });
     
 bot.login(token); //a garder en version heroku
