@@ -39,7 +39,9 @@ bot.on('message', msg => {
         console.log("Une personne a demandé pour aller sur ton site.")
     }
     if(msg.content === "info") {
-       var embed = new Discord.RichEmbed()
+module.exports.run = async (bot, message, args) => {
+        let sicon = message.guild.iconURL;
+        var embed = new Discord.RichEmbed()
        .setDescription("Information du Discord")
        .setThumbnail(sicon)
        .addField("Nom du Discord", msg.guild.name)
