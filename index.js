@@ -39,6 +39,37 @@ bot.on('message', msg => {
         msg.channel.send("En cours.... de développement")
         console.log("Une personne a demandé pour aller sur ton site.")
     }
+    if (message.content === "info")
+        var embed = new Discord.RichEmbed
+        .setDescription("Information du Discord")
+        .addField("EraKnight", message.guild.name)
+        .addField("Crée le", message.guild.createAt)
+        .addField("Tu as rejoin le", message.member.joinedAt)
+        .addField("Utilisateurs sur le discord", message.guild.memberCount)
+        .setColor("0x0000FF")
+    message.channel.sendEmbed(embed)
+    
+    }
+    
+    if (message.content.startsWith("sondage")) {
+        if (message.author.is == "330762245921439754"){
+            let args = message.content.split(" ").slice(1);
+            let thingToEcho = args.join(" ")
+            var embed = new Discord.RichEmbed()
+                .setDescription("Sondage")
+                .addField(thingToEcho, "Répondre avec :white_check_mark: ou :x:")
+                .setColor("0xB40404)
+                .setTimestamp()
+            message.guild.channels.fin("name", "sondage").sendEmbed(embed)
+            .them(function (message) {
+                message.react("✔️")
+                message.react("❌")
+            }).catch(function() {
+            });
+            }else{
+                return message.reply("Tu n'as pas la permission.")
+}}})
+                       
 });
 
 bot.login(token); //a garder en version heroku
