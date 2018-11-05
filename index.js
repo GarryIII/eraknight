@@ -48,11 +48,7 @@ module.exports.run = async (bot, message, args) => {
        .addField("IP du serveur", "EraKnight Soon....")
        .addField("Utilisateurs sur le discord", msg.guild.memberCount)
        .setColor("0x0000FF")
-    msg.channel.sendEmbed(embed)
-    }
-
-    module.exports.help = {
-      name:"Information du Discord"
+     msg.channel.sendEmbed(embed)
     }
 });
     
