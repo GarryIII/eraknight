@@ -38,23 +38,24 @@ bot.on('message', msg => {
         msg.channel.send("En cours.... de développement")
         console.log("Une personne a demandé pour aller sur ton site.")
     }
-     if (commandKey == "info") {
+    if (commandKey == "info") {
         var embed = new Discord.RichEmbed();
-        embed.addField("EraKnight", `${message.guild.name}`, true)
-           .addField("Serveur ID", `${message.guild.id}`, true)
-          .setColor(randomcolor())
-          .setFooter(' ', ' ')
-          if (message.guild.iconURL) embed.setThumbnail(`${message.guild.iconURL}`);
-          if (message.author.avatarURL) embed.setURL(`${message.author.avatarURL}`);
-      embed.setTimestamp()
-          .addField('Admin du Discord', `${message.guild.owner.user.username}`, true)
-          .addField('Crée le', `${moment(message.guild.createdAt).format('MM.DD.YY')}`, true)
-          .addField('Roles', `${message.guild.roles.filter(r => r.name).size}`, true)
-          .addField('Verification Level', `${message.guild.verificationLevel}`, true)
-          .addField('Region', `${message.guild.region}`, true)
-      message.channel.sendEmbed(
-          embed, {
-              disableEveryone: true
-});
+        embed.addField("EraKnight", `${msg.guild.name}`, true)
+        .addField("Serveur ID", `${msg.guild.id}`, true)
+        .setColor(randomcolor())
+        .setFooter(' ', ' ')
+        if (msg.guild.iconURL) embed.setThumbnail(`${msg.guild.iconURL}`);
+        if (msg.author.avatarURL) embed.setURL(`${msg.author.avatarURL}`);
+        embed.setTimestamp()
+        .addField('Admin du Discord', `${msg.guild.owner.user.username}`, true)
+        .addField('Crée le', `${moment(msg.guild.createdAt).format('MM.DD.YY')}`, true)
+        .addField('Roles', `${msg.guild.roles.filter(r => r.name).size}`, true)
+        .addField('Verification Level', `${msg.guild.verificationLevel}`, true)
+        .addField('Region', `${msg.guild.region}`, true)
+    msg.channel.sendEmbed(
+        embed, {
+           disableEveryone: true
+    }
+ });
     
 bot.login(token); //a garder en version heroku
