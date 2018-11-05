@@ -30,7 +30,7 @@ bot.on('message', msg => {
         msg.reply("Heureux de te revoir parmis nous.")
     }
     if (msg.content.match(/salut/i)) {
-            msg.reply('Salutaion.')
+            msg.reply('Je suis d\'accord avec toi.')
     }
     if (msg.content == "IP"){
             msg.reply('EraKnight V2 Soon.....')
