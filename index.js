@@ -69,7 +69,7 @@ bot.on('message', msg => {
             }else{
                 return message.reply("Tu n'as pas la permission.")
 }}})
-                       
+
 });
 
 bot.login(token); //a garder en version heroku
