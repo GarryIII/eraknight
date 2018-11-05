@@ -38,14 +38,18 @@ bot.on('message', msg => {
         msg.channel.send("En cours.... de développement")
         console.log("Une personne a demandé pour aller sur ton site.")
     }
-    if (msg.content === "info") {
-       var embed = new Discord.RichEmbed()
-       .setDescription("Information du Discord")
-       .addField("Nom du Discord", msg.guild.name)
-       .addField("IP du serveur", "EraKnight Soon....")
-       .addField("Utilisateurs sur le discord", msg.guild.memberCount)
-       .setColor("0x0000FF")
-     msg.channel.sendEmbed(embed)
+    if(message.content === prefix + "info") {
+        var info_embed = new Discord.RichEmbed()
+        .setColor("#40A497")
+        .setTitle("Information du Discord!")
+        .addField(" :robot: EraKnight :", `${client.user.tag}`, true)
+        .addField("Déscriminateur du bot :hash:", `#${client.user.descriminator}`)
+        .addField("ID :id: ", `${client.user.id}`)
+        .addField("Nombre de membres", message.guild.members.size)
+        .addField("Nombre de Salons", message.guild.channels.size)
+        .setFooter("Info - EraKnight")
+        message.channels.sendMessage(info_embed)
+        console.log("Un utilisateur à éffectué la commande d'information!")
     }
 });
     
