@@ -38,41 +38,15 @@ bot.on('message', msg => {
         msg.channel.send("En cours.... de développement")
         console.log("Une personne a demandé pour aller sur ton site.")
     }
-    if (msg.content === "info"){
-        var embed = new Discord.RichEmbed()
-        .setDescription("Information du Discord")
-        .addField("Nom du Discord", msg.guild.name)
-        .addField("IP du serveur", "EraKnight Soon....")
-        .addField("Utilisateurs sur le discord", msg.guild.memberCount)
-        .setColor("0x0000FF")
-      msg.channel.sendEmbed(embed)
-    }
-    module.exports.run = async (bot, message, args) => {
-        let rUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
-        if(!rUser) return message.channel.send("Couldn't find user.");
-        let rreason = args.join(" ").slice(22);
-
-        let reportEmbed = new Discord.RichEmbed()
-        .setDescription("Reports")
-        .setColor("#15f153")
-        .addField("Joueur Signaler", `${rUser} with ID: ${rUser.id}`)
-        .addField("Signaler par", `${message.author} with ID: ${message.author.id}`)
-        .addField("Salon", message.channel)
-        .addField("Heure", message.createdAt)
-        .addField("Raison", rreason);
-
-        let reportschannel = message.guild.channels.find(`sssss`, "sssss");
-        if(!reportschannel) return message.channel.send("Couldn't find reports channel.");
-
-
-        message.delete().catch(O_o=>{});
-        reportschannel.send(reportEmbed);
-
-    }
- 
-    module.exports.help = {
-       name: "report"
-    }
+    if (command === "info") {
+          message.channel.send("```Admin: " + Server.Owner + " \n",
+                    "IP du Seveur " + "ErakKnight v2 Soon...");
+                    "Nom du Serveur: " + Server.Name + " \n",
+                    "Combien de Grade: " + e.Server.RoleCount + " \n",
+                    "AFK: " + Server.AFKTimeout + " seconds \n",
+                    "Nombre de Salon: " + Server.ChannelCount + " \n",
+                     "Il y à " + Server.UserCount + " Membres ```");
+    } else
 });
     
 bot.login(token); //a garder en version heroku
