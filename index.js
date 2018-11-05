@@ -38,23 +38,16 @@ bot.on('message', msg => {
         msg.channel.send("En cours.... de développement")
         console.log("Une personne a demandé pour aller sur ton site.")
     }
-    if (commandKey == "info") {
-        var embed = new Discord.RichEmbed();
-        embed.addField("EraKnight", `${msg.guild.name}`, true)
-        .addField("Serveur ID", `${msg.guild.id}`, true)
-        .setColor(randomcolor())
-        .setFooter(' ', ' ')
-        if (msg.guild.iconURL) embed.setThumbnail(`${msg.guild.iconURL}`);
-        if (msg.author.avatarURL) embed.setURL(`${msg.author.avatarURL}`);
-        embed.setTimestamp()
-        .addField('Admin du Discord', `${msg.guild.owner.user.username}`, true)
-        .addField('Crée le', `${moment(msg.guild.createdAt).format('MM.DD.YY')}`, true)
-        .addField('Roles', `${msg.guild.roles.filter(r => r.name).size}`, true)
-        .addField('Verification Level', `${msg.guild.verificationLevel}`, true)
-        .addField('Region', `${msg.guild.region}`, true)
-    msg.channel.sendEmbed(
-        embed, {
-           disableEveryone: true
-      }
+    }
+    if (msg.content === "info") {
+       var embed = new Discord.RichEmbed()
+       .setDescription("Information du Discord")
+       .addField("Nom du Discord", msg.guild.name)
+       .addField("IP du serveur", "EraKnight Soon....")
+       .addField("Utilisateurs sur le discord", msg.guild.memberCount)
+       .setColor("0x0000FF")
+     msg.channel.sendEmbed(embed)
+    }
+});
     
 bot.login(token); //a garder en version heroku
