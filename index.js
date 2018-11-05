@@ -50,26 +50,7 @@ bot.on('message', msg => {
     message.channel.sendEmbed(embed)
     
     }
-    
-    if (message.content.startsWith("sondage")) {
-        if (message.author.is == "330762245921439754"){
-            let args = message.content.split(" ").slice(1);
-            let thingToEcho = args.join(" ")
-            var embed = new Discord.RichEmbed()
-                .setDescription("Sondage")
-                .addField(thingToEcho, "Répondre avec :white_check_mark: ou :x:")
-                .setColor("0xB40404)
-                .setTimestamp()
-            message.guild.channels.fin("name", "sondage").sendEmbed(embed)
-            .them(function (message) {
-                message.react("✔️")
-                message.react("❌")
-            }).catch(function() {
-            });
-            }else{
-                return message.reply("Tu n'as pas la permission.")
-}}})
-
+       
 });
 
 bot.login(token); //a garder en version heroku
