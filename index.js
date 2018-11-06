@@ -35,7 +35,7 @@ bot.on('message', msg => {
         msg.channel.send(info_embed)
         console.log("Un utilisateur à éffectué la commande d'information!")
     }
-    module.exports.run = async (bot, message, args) => {
+    if (msg.content == "infobot") {
        let bicon = bot.user.displayAvatarURL
        let botembed = new Discord.RichEmbed()
        .setTitle("Information du Bot")
@@ -46,11 +46,6 @@ bot.on('message', msg => {
        .addField("Created On", bot.user.createdAt)
        .addField("Crée par", "GarryIII#9253");
        return message.channel.send(botembed);
-    }
-
-
-module.exports.help = {
-    name: "Info"
     }
 });
     
