@@ -5,6 +5,7 @@ const bot = new Discord.Client();
 var prefix = ("?");
 
 bot.on("ready", () => {
+    console.log("Je suis prêt à être utilisé.")
     bot.user.setPresence({
         game: { 
             name: '| EraKnight v2 |',
