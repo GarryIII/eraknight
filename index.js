@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const token = process.env.token // a garder en version heroku
 const prefix = ("?");
 const Commando = require('discord.js-commando');
-const patch = require('patch');
+const path = require('path');
 
 const client = new Commando.Client({
     owner: '273462235186200576',
