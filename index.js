@@ -8,22 +8,6 @@ bot.on('ready', function () {
     bot.user.setActivity('| EraKnight v2 |').catch(console.error)
 });
 
-bot.on('guildMemberAdd', member => {
-    member.createDM().then(channel => {
-        return channel.send('Bienvenue sur le serveur' + member.displayName)
-        console.log(`${member.displayName} à rejoind le serveur.`)
-    }).catch(console.error)
-});
-
-const ban = require('./kick et ban/ban');
-
-
-bot.on('message', function (message){
-    if (ban.match(message)){
-        return ban.action(message)
-    }
-});
-
 bot.on('message', msg => {
     if (msg.content === "bonjour"){
         msg.reply("Heureux de te revoir parmis nous.")
