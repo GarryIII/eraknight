@@ -1,6 +1,8 @@
 const Discord = require('discord.js');
 const token = process.env.token // a garder en version heroku
-const prefix = ("?");
+const bot = new Discord.Client();
+
+var prefix = ("?");
 
 bot.on('ready', function () {
     console.log("Je suis prêt à être utilisé.")
