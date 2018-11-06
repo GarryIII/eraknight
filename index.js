@@ -36,8 +36,8 @@ bot.on('message', msg => {
         console.log("Un utilisateur à éffectué la commande d'information!")
     }
     if (msg.content == "infobot") {
-       let bicon = bot.user.displayAvatarURL
-       let botembed = new Discord.RichEmbed()
+       var bicon = bot.user.displayAvatarURL
+       var botembed = new Discord.RichEmbed()
        .setTitle("Information du Bot")
        .setColor("#ffd700")
        .setTimestamp()
