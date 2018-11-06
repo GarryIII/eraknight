@@ -11,7 +11,7 @@ bot.on("ready", () => {
             name: '| EraKnight v2 |',
             type: 'WATCHING'
         },
-        status: 'idle'
+        status: 'online'
     })
 })
 bot.on('message', msg => {
