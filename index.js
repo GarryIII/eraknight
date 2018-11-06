@@ -37,7 +37,7 @@ bot.on('message', msg => {
     }
     if (msg.content == "infobot") {
        var bicon = bot.user.displayAvatarURL
-       var botembed = new Discord.RichEmbed()
+       var bot_embed = new Discord.RichEmbed()
        .setTitle("Information du Bot")
        .setColor("#ffd700")
        .setTimestamp()
