@@ -1,23 +1,6 @@
 const Discord = require('discord.js');
 const token = process.env.token // a garder en version heroku
 const prefix = ("?");
-const path = require('path');
-
-const client = new Commando.Client({
-    owner: '273462235186200576',
-    commandPrefix: '!'
-});
-
-client.registry
-    .registerGroups([])
-    .registerDefaults()
-    .registerCommandsIn(patch.join(__dirnale, 'commands'));
-
-client.on('ready', () => {
-    console.log(`Logged in as ${client.user.tag}!`);
-});
-
-client.login('MzgyMjE2NDM1MDE2OTI1MTk0.DsLb-w.vekHhtqZlf0OVfx9C0ozdawjkSg')
 
 bot.on('ready', function () {
     console.log("Je suis prêt à être utilisé.")
