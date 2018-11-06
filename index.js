@@ -5,8 +5,8 @@ const bot = new Discord.Client();
 var prefix = ("?");
 
 bot.on('ready', () => {
-    bot.user.setStatus('available') // Can be 'available', 'idle', 'dnd', or 'invisible'
-    bot.user.setPresence({
+    if bot.user.setStatus('available') // Can be 'available', 'idle', 'dnd', or 'invisible'
+       bot.user.setPresence({
         game: {
             name: '| EraKnight v2 |',
             type: 0
