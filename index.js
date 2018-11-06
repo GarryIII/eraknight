@@ -4,13 +4,15 @@ const bot = new Discord.Client();
 
 var prefix = ("?");
 
-bot.on('ready', function () {
-    bot.user.setStatus('available') // Can be 'available', 'idle', 'dnd', or 'invisible'
+bot.on("ready", () => {
     bot.user.setPresence({
-       game: {
+        game: { 
             name: '| EraKnight v2 |',
-            type: 0
-});
+            type: 'WATCHING'
+        },
+        status: 'idle'
+    })
+})
 bot.on('message', msg => {
     if (msg.content === "bonjour"){
         msg.reply("Heureux de te revoir parmis nous.")
