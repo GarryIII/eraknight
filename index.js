@@ -9,7 +9,7 @@ bot.on("ready", () => {
     bot.user.setPresence({
         game: { 
             name: '| EraKnight v2 |',
-            type: 'WATCHING'
+            type: 3
         },
         status: 'online'
     })
