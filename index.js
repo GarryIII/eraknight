@@ -4,10 +4,14 @@ const bot = new Discord.Client();
 
 var prefix = ("?");
 
-bot.on('ready', function () {
-    console.log("Je suis prêt à être utilisé.")
-    bot.user.setActivity('| EraKnight v2 |').catch(console.error)
-});
+bot.on('ready', () => {
+    bot.user.setStatus('available') // Can be 'available', 'idle', 'dnd', or 'invisible'
+    bot.user.setPresence({
+        game: {
+            name: '| EraKnight v2 |',
+            type: 0
+        }
+    });
 
 bot.on('message', msg => {
     if (msg.content === "bonjour"){
