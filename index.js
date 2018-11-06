@@ -31,7 +31,7 @@ bot.on('message', msg => {
         .addField("IP du serveur:", "EraKnight Soon....")
         .addField("Nombre de membres:", msg.guild.members.size)
         .addField("Nombre de Salons:", msg.guild.channels.size)
-        .setFooter("Info - EraKnight")
+        .setFooter("Info - EraKnight - 2018/2019")
         msg.channel.send(info_embed)
         console.log("Un utilisateur à éffectué la commande d'information!")
     }
