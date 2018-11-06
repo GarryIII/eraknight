@@ -45,7 +45,7 @@ bot.on('message', msg => {
        .addField("EraKnight", bot.user.username)
        .addField("Created On", bot.user.createdAt)
        .addField("Crée par", "GarryIII#9253");
-       return message.channel.send(botembed);
+       message.channel.send(botembed);
     }
 });
     
