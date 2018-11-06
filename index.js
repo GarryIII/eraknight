@@ -5,7 +5,7 @@ const prefix = ("?");
 
 bot.on('ready', function () {
     console.log("Je suis prêt à être utilisé.")
-    bot.user.setActivity('EraKnight V2').catch(console.error)
+    bot.user.setActivity('| EraKnight v2 |').catch(console.error)
 });
 
 bot.on('guildMemberAdd', member => {
