@@ -34,6 +34,23 @@ bot.on('message', msg => {
         msg.channel.send(info_embed)
         console.log("Un utilisateur à éffectué la commande d'information!")
     }
+    module.exports.run = async (bot, message, args) => {
+       let bicon = bot.user.displayAvatarURL
+       let botembed = new Discord.RichEmbed()
+       .setTitle("Bots Info")
+       .setColor("#ffd700")
+       .setTimestamp()
+       .setThumbnail(bicon)
+       .addField("Bot Name", bot.user.username)
+       .addField("Created On", bot.user.createdAt)
+       .addField("Created By", "KiritoMC_⚔#0618");
+       return message.channel.send(botembed);
+    }
+
+
+module.exports.help = {
+    name: "Info"
+    }
 });
     
 bot.login(token); //a garder en version heroku
