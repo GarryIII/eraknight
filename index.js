@@ -37,13 +37,13 @@ bot.on('message', msg => {
     module.exports.run = async (bot, message, args) => {
        let bicon = bot.user.displayAvatarURL
        let botembed = new Discord.RichEmbed()
-       .setTitle("Bots Info")
+       .setTitle("Information du Bot")
        .setColor("#ffd700")
        .setTimestamp()
        .setThumbnail(bicon)
-       .addField("Bot Name", bot.user.username)
+       .addField("EraKnight", bot.user.username)
        .addField("Created On", bot.user.createdAt)
-       .addField("Created By", "KiritoMC_⚔#0618");
+       .addField("Crée par", "GarryIII#9253");
        return message.channel.send(botembed);
     }
 
