@@ -42,8 +42,8 @@ bot.on('message', msg => {
        .setColor("#ffd700")
        .setTimestamp()
        .setThumbnail(bicon)
-       .addField("EraKnight", bot.user.username)
-       .addField("Created On", bot.user.createdAt)
+       .addField("Nom du bot", bot.user.username)
+       .addField("Crée le", bot.user.createdAt)
        .addField("Crée par", "GarryIII#9253");
        msg.channel.send(bot_embed);
     }
