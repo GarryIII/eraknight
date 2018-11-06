@@ -40,7 +40,7 @@ bot.on('message', msg => {
         msg.channel.send(info_embed)
         console.log("Un utilisateur à éffectué la commande d'information!")
     }
-    if (msg.content == "infobot") {
+    if (msg.content == "prefix + infobot") {
        var bicon = bot.user.displayAvatarURL
        var bot_embed = new Discord.RichEmbed()
        .setTitle("Information du Bot")
