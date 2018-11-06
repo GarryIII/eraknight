@@ -10,8 +10,7 @@ bot.on('ready', () => {
         game: {
             name: '| EraKnight v2 |',
             type: 0
-        }
-    });
+    }
 
 bot.on('message', msg => {
     if (msg.content === "bonjour"){
