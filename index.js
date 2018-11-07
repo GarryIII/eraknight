@@ -29,15 +29,15 @@ bot.on('message', msg => {
         var info_embed = new Discord.RichEmbed()
         .setColor("#40A497")
         .setTitle("Information du Discord!")
-        .addField("Nom du Discord:", ```msg.guild.name```)
-        .addField("IP du serveur:", "EraKnight Soon....")
-        .addField("Nombre de membres:", ```msg.guild.members.size```)
-        .addField("Nombre de Salons:", ```msg.guild.channels.size```)
+        .addField("Nom du Discord:", msg.guild.name)
+        .addField("IP du serveur:", "**EraKnight Soon....**")
+        .addField("Nombre de membres:", msg.guild.members.size)
+        .addField("Nombre de Salons:", msg.guild.channels.size)
         .setFooter("Info - EraKnight - 2018/2019")
         msg.channel.send(info_embed)
         console.log("Un utilisateur à éffectué la commande d'information!")
     }
-    if (msg.content == "prefix + infobot") {
+    if (msg.content     == "prefix + infobot") {
        var bicon = bot.user.displayAvatarURL
        var bot_embed = new Discord.RichEmbed()
        .setTitle("Information du Bot")
