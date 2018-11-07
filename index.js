@@ -35,7 +35,6 @@ bot.on('message', msg => {
         .addField("Nombre de Salons:", msg.guild.channels.size)
         .setFooter("Info - EraKnight - 2018/2019")
         msg.channel.send(info_embed)
-        .addReactions ":white_check_mark:")
         console.log("Un utilisateur à éffectué la commande d'information!")
     }
     if (msg.content == "prefix + infobot") {
