@@ -15,7 +15,7 @@ bot.on("ready", () => {
     })
 })
 bot.on('message', msg => {
-    if (msg.content === "bonjour"){
+    if (msg.content.match === "bonjour"){
         msg.reply("Heureux de te revoir parmis nous.")
     }
     if (msg.content == "ip"){
