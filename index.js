@@ -15,10 +15,10 @@ bot.on("ready", () => {
     })
 })
 bot.on('message', msg => {
-    if (msg.content.match === "bonjour"){
+    if (msg.content === "bonjour"){
         msg.reply("Heureux de te revoir parmis nous.")
     }
-    if (msg.content == "ip"){
+    if (msg.content === "ip"){
             msg.reply('EraKnight V2 Soon.....')
     }
     if (msg.content === "site"){
@@ -31,7 +31,7 @@ bot.on('message', msg => {
         .setTitle("Information du Discord!")
         .addField("Nom du Discord:", msg.guild.name)
         .addField("IP du serveur:", "**EraKnight Soon....**")
-        .addField("Nombre de membres:", msg.guild.members.size)
+        .addField("Nombre de membres:", msg.guild.members.size "Joueur")
         .addField("Nombre de Salons:", msg.guild.channels.size)
         .setFooter("Info - EraKnight - 2018/2019")
         msg.channel.send(info_embed)
