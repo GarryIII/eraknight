@@ -25,13 +25,13 @@ bot.on('message', msg => {
         msg.channel.send("En cours.... de développement")
         console.log("Une personne a demandé pour aller sur ton site.")
     }
-    if (msg.content === "info") {
+    if (msg.content === "Info + info") {
         var info_embed = new Discord.RichEmbed()
         .setColor("#40A497")
         .setTitle("Information du Discord!")
         .addField("Nom du Discord:", msg.guild.name)
         .addField("IP du serveur:", "**EraKnight Soon....**")
-        .addField("Nombre de membres:", msg.guild.members.size "Joueur")
+        .addField("Nombre de membres:", msg.guild.members.size)
         .addField("Nombre de Salons:", msg.guild.channels.size)
         .setFooter("Info - EraKnight - 2018/2019")
         msg.channel.send(info_embed)
