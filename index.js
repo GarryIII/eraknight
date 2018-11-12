@@ -15,7 +15,7 @@ bot.on("ready", () => {
     })
 })
 bot.on('message', msg => {
-    if (msg.content === "bonjour"){
+    if (msg.content === "Bonjour"){
         msg.reply("Heureux de te revoir parmis nous.")
     }
     if (msg.content === "ip"){
@@ -27,6 +27,7 @@ bot.on('message', msg => {
     }
     if (msg.content === "info") {
         var info_embed = new Discord.RichEmbed()
+        .addfield(msg.author.avatarURL);
         .setColor("#40A497")
         .setTitle("Information du Discord!")
         .addField("Nom du Discord:", msg.guild.name)
