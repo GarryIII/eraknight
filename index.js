@@ -29,7 +29,7 @@ bot.on('message', msg => {
         var info_embed = new Discord.RichEmbed()
         .setColor("#40A497")
         .setTitle("Information du Discord!")
-        .addBlankField(true)
+        .setThumbnail("https://img.over-blog-kiwi.com/1/81/49/18/20180727/ob_da0763_bhad-bhabie.jpg")
         .addField("Nom du Discord:", msg.guild.name)
         .addField("IP du serveur:", "**EraKnight Soon....**")
         .addField("Nombre de membres:", msg.guild.members.size)
